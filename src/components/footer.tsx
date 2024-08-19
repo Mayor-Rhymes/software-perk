@@ -1,9 +1,11 @@
-import { Alegreya } from "next/font/google";
+import { Alegreya } from 'next/font/google';
+import EmailDialog from '@/components/email-dialog';
 
 const alegreya = Alegreya({
-  subsets: ["latin"],
-  weight: "700",
+  subsets: ['latin'],
+  weight: '700',
 });
+
 export default function Footer() {
   return (
     <div className="bg-black text-white p-20 flex flex-col gap-12">
@@ -20,9 +22,7 @@ export default function Footer() {
         <button className="bg-lime-100 text-black px-6 py-3 rounded-md">
           Give us a call
         </button>
-        <button className="bg-transparent px-6 py-3 rounded-md border-2 border-lime-100">
-          Send an email
-        </button>
+        <EmailDialog />
       </div>
     </div>
   );
