@@ -1,14 +1,10 @@
-import { Alegreya } from "next/font/google";
 import ShowcaseCard from "./showcase-card";
 import { ShowcaseStore } from "@/lib/showcase-data";
-const alegreya = Alegreya({
-  subsets: ["latin"],
-  weight: "700",
-});
+
 export default function Showcase() {
   return (
     <div className="flex flex-col gap-3 sm:gap-4 md:gap-5 px-4 sm:px-6 md:px-8 lg:px-10">
-      <p className={`text-center text-2xl sm:text-3xl md:text-4xl ${alegreya.className}`}>Our Expertise?</p>
+      <p className="text-center text-2xl sm:text-3xl md:text-4xl font-alegreya">Our Expertise?</p>
 
       <p className="text-center text-xl sm:text-2xl md:text-3xl">It is pretty simple. We:</p>
 

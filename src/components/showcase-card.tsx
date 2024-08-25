@@ -1,9 +1,5 @@
-import { Alegreya } from "next/font/google";
-import Image, { StaticImageData } from "next/image";
-const alegreya = Alegreya({
-  subsets: ["latin"],
-  weight: "700",
-});
+import Image, { StaticImageData } from 'next/image';
+
 interface ShowcaseProps {
   image: StaticImageData;
   title: string;
@@ -25,9 +21,7 @@ const ShowcaseCard = ({
         className="h-[100px] w-[100px] lg:h-[200px] lg:w-[200px]"
       />
       <div className="flex flex-col gap-3">
-        <p className={`text-4xl font-semibold ${alegreya.className}`}>
-          {title}
-        </p>
+        <p className="text-4xl font-semibold font-alegreya">{title}</p>
         <p className="text-gray-600 text-lg">{description}</p>
       </div>
     </div>

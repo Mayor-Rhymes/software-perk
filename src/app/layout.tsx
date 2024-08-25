@@ -1,14 +1,13 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import type { Metadata } from 'next';
 
-const inter = Inter({ subsets: ["latin"] });
+import './globals.css';
+import Navbar from '@/components/navbar';
+import Footer from '@/components/footer';
+import { alegreya, inter } from '@/lib/fonts';
 
 export const metadata: Metadata = {
-  title: "Software Perk",
-  description: "Software development company",
+  title: 'Software Perk',
+  description: 'Software development company',
 };
 
 export default function RootLayout({
@@ -18,7 +17,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-white ${inter.className}`}>
+      <body
+        className={`bg-white ${inter.className} ${alegreya.className} font-sans`}
+      >
         <Navbar />
 
         {children}

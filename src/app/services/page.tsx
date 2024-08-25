@@ -1,15 +1,12 @@
 import ServiceCard from "@/components/service-card";
-import { Alegreya } from "next/font/google";
 
-const alegreya = Alegreya({
-  subsets: ["latin"],
-  weight: "700",
-});
+
+
 
 export default function ServicesPage() {
   return (
     <div className="min-h-screen flex flex-col gap-10 px-4 sm:px-8 md:px-16 lg:px-20 py-16">
-      <h1 className={`text-center text-3xl sm:text-4xl lg:text-6xl ${alegreya.className}`}>
+      <h1 className="text-center text-3xl sm:text-4xl lg:text-6xl font-alegreya">
         Our Services
       </h1>
       
