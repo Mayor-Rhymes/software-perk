@@ -5,7 +5,7 @@ import Technologies from "@/components/technologies";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col gap-10">
+    <main className="min-h-screen flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-10">
       <Hero />
       <Showcase />
       <Designs />
