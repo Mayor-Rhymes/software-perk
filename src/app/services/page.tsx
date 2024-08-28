@@ -10,7 +10,7 @@ export default function ServicesPage() {
         Our Services
       </h1>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <ServiceCard
           title="Web Development"
           description="Custom web applications tailored to your business needs."
