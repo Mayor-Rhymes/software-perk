@@ -13,7 +13,8 @@ const MobileNavBar = () => {
   const menuItems = [
     { href: '/services', label: 'Services' },
     { href: '/pricing', label: 'Pricing' },
-    { href: '/history', label: 'History' },
+    { href: '/about', label: 'About' },
+    { href: '/contact', label: 'Contact' },
   ];
 
   return (
