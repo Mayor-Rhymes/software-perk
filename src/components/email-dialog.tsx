@@ -11,19 +11,21 @@ import {
 } from './ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Send } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import SubmitBtn from './submit-btn';
 
 export default function EmailDialog() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [name, setName] = useState('');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
+    console.log('Name:', name);
     console.log('Email:', email);
     console.log('Message:', message);
 
+    setName('');
     setEmail('');
     setMessage('');
   };
@@ -43,6 +45,18 @@ export default function EmailDialog() {
           </DialogDescription>
         </DialogHeader>
         <form onSubmit={handleSubmit} className="grid gap-4 py-4">
+          <div className="grid gap-2">
+            <label htmlFor="name" className="text-sm font-medium">
+              Name
+            </label>
+            <Input
+              id="name"
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+          </div>
           <div className="grid gap-2">
             <label htmlFor="email" className="text-sm font-medium">
               Email
@@ -67,13 +81,7 @@ export default function EmailDialog() {
               required
             />
           </div>
-          <Button
-            type="submit"
-            className="w-full sm:w-auto justify-self-end group"
-          >
-            Send
-            <Send className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <SubmitBtn className="w-full sm:w-auto sm:px-8" />
         </form>
       </DialogContent>
     </Dialog>
