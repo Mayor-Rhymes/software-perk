@@ -1,29 +1,13 @@
 'use client';
 
-import { useState } from 'react';
-import { MapPin, Phone, Mail, Send } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+
+import { MapPin, Phone, Mail, } from 'lucide-react';
 import SubmitBtn from '@/components/submit-btn';
+import { sendEmail } from '@/actions/sendEmail';
+import { toast } from 'sonner';
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    setFormData({ name: '', email: '', message: '' });
-  };
-
+  
   return (
     <div className="min-h-screen flex flex-col gap-16 px-4 sm:px-8 md:px-16 lg:px-20 py-16">
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-alegreya text-center mb-8">
@@ -35,7 +19,20 @@ export default function ContactPage() {
           <h2 className="text-2xl font-alegreya font-semibold mb-6">
             Send us a Message
           </h2>
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form className="space-y-6" action={async (FormData) => {
+            const { data, error } = await sendEmail(FormData);
+            
+            console.log(data);
+            if (error) {
+              toast.error(error);
+              return;
+            }
+
+            toast.success("Email sent successfully!");
+
+            const form = document.querySelector('form') as HTMLFormElement;
+            form.reset();
+          }}>
             <div>
               <label
                 htmlFor="name"
@@ -47,9 +44,8 @@ export default function ContactPage() {
                 type="text"
                 id="name"
                 name="name"
-                value={formData.name}
-                onChange={handleChange}
                 required
+                maxLength={500}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lime-500"
               />
             </div>
@@ -63,9 +59,8 @@ export default function ContactPage() {
               <input
                 type="email"
                 id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
+                name="senderEmail"
+                maxLength={500}
                 required
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lime-500"
               />
@@ -80,8 +75,7 @@ export default function ContactPage() {
               <textarea
                 id="message"
                 name="message"
-                value={formData.message}
-                onChange={handleChange}
+                maxLength={5000}
                 required
                 rows={4}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-lime-500"

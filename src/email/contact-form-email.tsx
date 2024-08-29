@@ -34,6 +34,7 @@ export default function ContactFormEmail({
               <Heading className="leading-tight">
                 You received the following message from the contact from {name}
               </Heading>
+              <Text className="text-lg">This is the message:</Text>
               <Text>{message}</Text>
               <Hr />
               <Text>The sender&apos;s email is: {senderEmail}</Text>
