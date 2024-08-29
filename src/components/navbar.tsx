@@ -13,7 +13,7 @@ const menuItems = [
 ];
 
 export default function Navbar() {
-  const isMobile = useMedia('(max-width: 1024px)', false);
+  const isMobile = useMedia('(max-width: 1020px)', false);
   
 
   if (isMobile) {
@@ -21,7 +21,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="flex items-center justify-between h-20 px-6 lg:px-10">
+    <nav className="hidden items-center justify-between h-20 px-6 sm:flex">
       <Link href="/" className="text-2xl font-bold">
         Software Perk
       </Link>
