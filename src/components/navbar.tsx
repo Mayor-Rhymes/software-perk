@@ -1,22 +1,41 @@
-import Link from "next/link";
+'use client';
+
+import Link from 'next/link';
+import { useMedia } from 'react-use';
+import MobileNavBar from './mobileNavBar';
+//import { motion } from "framer-motion";
+
+const menuItems = [
+  { href: '/services', label: 'Services' },
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/history', label: 'History' },
+];
 
 export default function Navbar() {
+  const isMobile = useMedia('(max-width: 1024px)', false);
+  
+
+  if (isMobile) {
+    return <MobileNavBar />;
+  }
+
   return (
-    <nav className="hidden h-[80px] lg:flex items-center px-8">
-      <Link href="/">
-        <p className="grow text-xl">Software Perk</p>
+    <nav className="flex items-center justify-between h-20 px-6 lg:px-10">
+      <Link href="/" className="text-2xl font-bold">
+        Software Perk
       </Link>
 
-      <ul className="flex grow-[2] items-center justify-evenly">
-        <li className="hover:font-semibold hover:text-black">
-          <Link href="/services">Services</Link>
-        </li>
-        <li className="hover:font-semibold hover:text-black">
-          <Link href="/pricing">Pricing</Link>
-        </li>
-        <li className="hover:font-semibold hover:text-black">
-          <Link href="/history">History</Link>
-        </li>
+      <ul className="flex items-center space-x-8">
+        {menuItems.map((item, index) => (
+          <li key={item.href}>
+            <Link
+              href={item.href}
+              className="text-lg font-medium hover:text-primary transition-colors"
+            >
+              {item.label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
