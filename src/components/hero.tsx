@@ -2,6 +2,7 @@ import Image from 'next/image';
 import * as motion from 'framer-motion/client';
 import engine from '../../public/images/computer-engineer.png';
 import engine2 from '../../public/images/computer-engineer-2.png';
+import Link from 'next/link';
 
 export default function Hero() {
   return (
@@ -11,29 +12,51 @@ export default function Hero() {
           className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 font-alegreya"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ type: 'spring', stiffness: 100, damping: 20 }}
         >
           Transforming Ideas into Digital Reality
         </motion.h1>
         <div className="mb-8 space-y-4 text-sm sm:text-base md:text-lg">
           <motion.p
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{
+              type: 'spring',
+              stiffness: 100,
+              damping: 20,
+              delay: 0.2,
+            }}
           >
-            We are a cutting-edge software company that combines innovative solutions with stunning design.
+            We are a cutting-edge software company that combines innovative
+            solutions with stunning design.
           </motion.p>
           <motion.p
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            transition={{
+              type: 'spring',
+              stiffness: 100,
+              damping: 20,
+              delay: 0.4,
+            }}
           >
-            Our team delivers fast, cost-effective, and efficient results that bring your visionary ideas to life.
+            Our team delivers fast, cost-effective, and efficient results that
+            bring your visionary ideas to life.
           </motion.p>
         </div>
-        <button className="px-6 py-3 text-sm font-semibold text-white transition-all duration-300 bg-black rounded-full sm:text-base hover:bg-white hover:text-black hover:shadow-lg">
-          Get a Quote
-        </button>
+        <motion.button
+          className="px-6 py-3 text-sm font-semibold text-white transition-all duration-300 bg-black rounded-full sm:text-base hover:bg-white hover:text-black hover:shadow-lg"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            type: 'spring',
+            stiffness: 50,
+            damping: 10,
+            delay: 0.3,
+          }}
+        >
+          <Link href="/contact">Get a Quote</Link>
+        </motion.button>
         <p className="mt-4 text-xs sm:text-sm">
           Take the first step towards making your digital dreams a reality!
         </p>
