@@ -12,19 +12,36 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import SubmitBtn from './submit-btn';
+import { sendEmail } from '@/actions/sendEmail'; // Import the sendEmail function
+import { toast } from 'sonner'; // Import toast for notifications
+import { Button } from './ui/button';
+import { Send } from 'lucide-react';
 
 export default function EmailDialog() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [name, setName] = useState('');
+  const [pending, setPending] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setPending(true); // Set pending to true when submitting
 
-    console.log('Name:', name);
-    console.log('Email:', email);
-    console.log('Message:', message);
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('senderEmail', email);
+    formData.append('message', message);
 
+    try {
+      await sendEmail(formData); // Pass FormData instead
+      toast.success('Email sent successfully!'); // Show success message
+    } catch (error) {
+      toast.error('Failed to send email. Please try again.'); // Show error message
+    } finally {
+      setPending(false); // Reset pending state
+    }
+
+    // Reset form fields
     setName('');
     setEmail('');
     setMessage('');
@@ -81,7 +98,20 @@ export default function EmailDialog() {
               required
             />
           </div>
-          <SubmitBtn className="w-full sm:w-auto sm:px-8" />
+          <Button
+            type="submit"
+            className="group flex items-center justify-center gap-2 h-[3rem] text-white bg-gray-900 rounded-full outline-none transition-all focus:scale-110 hover:bg-gray-800"
+            disabled={pending}
+          >
+            {pending ? (
+              <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
+            ) : (
+              <>
+                Send{' '}
+                <Send className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{' '}
+              </>
+            )}
+          </Button>
         </form>
       </DialogContent>
     </Dialog>
