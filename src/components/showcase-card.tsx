@@ -1,10 +1,12 @@
 import Image, { StaticImageData } from 'next/image';
+import { motion } from 'framer-motion';
 
 interface ShowcaseProps {
   image: StaticImageData;
   title: string;
   description: string;
   alternativeText: string;
+  isVisible: boolean; 
 }
 
 const ShowcaseCard = ({
@@ -12,9 +14,15 @@ const ShowcaseCard = ({
   title,
   description,
   alternativeText,
+  isVisible, 
 }: ShowcaseProps) => {
   return (
-    <div className="flex flex-col md:flex-row gap-10 lg:flex-col lg:gap-3 bg-lime-100 py-10 px-6 rounded-xl">
+    <motion.div
+      className="flex flex-col md:flex-row gap-10 lg:flex-col lg:gap-3 bg-lime-100 py-10 px-6 rounded-xl"
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.95 }} // Use isVisible for animation
+      transition={{ duration: 0.3 }}
+    >
       <Image
         src={image}
         alt={alternativeText}
@@ -24,7 +32,7 @@ const ShowcaseCard = ({
         <p className="text-4xl font-semibold font-alegreya">{title}</p>
         <p className="text-gray-600 text-lg">{description}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
