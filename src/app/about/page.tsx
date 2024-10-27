@@ -10,7 +10,7 @@ export default function AboutPage() {
     return (
         <div className="min-h-screen flex flex-col gap-16 px-4 sm:px-8 md:px-16 lg:px-20 py-16">
             <section className="text-center">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-alegreya mb-6">About Software Perk</h1>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-alegreya mb-6">About NexGenesis</h1>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                     We are a passionate team of developers, designers, and innovators dedicated to transforming ideas into digital realities.
                 </p>
@@ -29,7 +29,7 @@ export default function AboutPage() {
                 <div className="relative h-64 md:h-full">
                     <Image
                         src="/images/journey.png"
-                        alt="Software Perk Journey"
+                        alt="NexGenesis Journey"
                         layout="fill"
                         objectFit="cover"
                         className="rounded-lg"

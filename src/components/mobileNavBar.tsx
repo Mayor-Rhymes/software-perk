@@ -34,7 +34,7 @@ const MobileNavBar = () => {
         <div className="flex flex-col h-full">
           <div className="flex justify-between items-center mb-10">
             <Link href="/" className="text-2xl font-bold">
-              Software Perk
+              NexGenesis
             </Link>
           </div>
           <nav className="flex-grow">

@@ -24,7 +24,7 @@ export default function Navbar() {
   return (
     <nav className="hidden items-center justify-between h-20 px-6 sm:flex">
       <Link href="/" className="text-2xl font-bold">
-        Software Perk
+        NexGenesis
       </Link>
 
       <ul className="flex items-center space-x-8">
