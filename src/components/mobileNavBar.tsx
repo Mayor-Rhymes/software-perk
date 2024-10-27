@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
-import { Menu, X } from 'lucide-react';
+import { Contact2, CreditCard, Menu, Server, UsersRound } from 'lucide-react';
 import Link from 'next/link';
 import { DialogDescription, DialogTitle } from './ui/dialog';
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
@@ -11,10 +11,10 @@ const MobileNavBar = () => {
   const [open, setOpen] = useState(false);
 
   const menuItems = [
-    { href: '/services', label: 'Services' },
-    { href: '/pricing', label: 'Pricing' },
-    { href: '/about', label: 'About' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/services', label: 'Services', icon: Server },
+    { href: '/pricing', label: 'Pricing', icon: CreditCard },
+    { href: '/about', label: 'About', icon: UsersRound },
+    { href: '/contact', label: 'Contact', icon: Contact2 },
   ];
 
   return (
@@ -46,6 +46,7 @@ const MobileNavBar = () => {
                     className="block py-2 text-lg hover:text-primary transition-colors"
                     onClick={() => setOpen(false)}
                   >
+                    <item.icon className="h-6 w-6 inline-block mr-2" />
                     {item.label}
                   </Link>
                 </li>
