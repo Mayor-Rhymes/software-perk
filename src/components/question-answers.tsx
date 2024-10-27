@@ -44,9 +44,21 @@ export function QuestionAnswers() {
                   </AccordionContent>
                </AccordionItem>
                <AccordionItem value="item-3" className="border-b border-gray-200">
-                  <AccordionTrigger className="text-lg font-semibold">Do you do mobile apps?</AccordionTrigger>
+                  <AccordionTrigger className="text-lg font-semibold">Do we do mobile apps?</AccordionTrigger>
                   <AccordionContent className="text-gray-600">
                      Yes, we develop mobile apps for both iOS and Android platforms. We can create native apps or cross-platform solutions depending on your requirements and budget.
+                  </AccordionContent>
+               </AccordionItem>
+               <AccordionItem value="item-4" className="border-b border-gray-200">
+                  <AccordionTrigger className="text-lg font-semibold">How much does it cost?</AccordionTrigger>
+                  <AccordionContent className="text-gray-600">
+                     We offer a wide range of pricing options. From basic to enterprise-level solutions, we&apos;re here to help you get the most out of your digital presence.
+                  </AccordionContent>
+               </AccordionItem>
+               <AccordionItem value="item-5" className="border-b border-gray-200">
+                  <AccordionTrigger className="text-lg font-semibold">What if I need help?</AccordionTrigger>
+                  <AccordionContent className="text-gray-600">
+                     We&apos;re here to help. Give us a call or send us an email and we&apos;ll get back to you as soon as possible.
                   </AccordionContent>
                </AccordionItem>
             </Accordion>
