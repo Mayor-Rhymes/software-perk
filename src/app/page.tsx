@@ -1,6 +1,7 @@
 import { AppSidebar } from '@/components/app-sidebar';
 import Designs from '@/components/designs';
 import Hero from '@/components/hero';
+import { QuestionAnswers } from '@/components/question-answers';
 import Showcase from '@/components/showcase';
 import Technologies from '@/components/technologies';
 import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
@@ -12,6 +13,7 @@ export default function Home() {
       <Showcase />
       <Designs />
       <Technologies />
+      <QuestionAnswers />
     </main>
   );
 }
