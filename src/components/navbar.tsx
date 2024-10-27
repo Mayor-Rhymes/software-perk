@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useMedia } from 'react-use';
 import MobileNavBar from './mobileNavBar';
+
 //import { motion } from "framer-motion";
 
 const menuItems = [
