@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react';
+import Link from 'next/link';
 
 interface PricingCardProps {
   title: string;
@@ -35,15 +36,18 @@ export default function PricingCard({
           </li>
         ))}
       </ul>
+      <Link href="/contact">
       <button
         className={`mt-6 px-6 py-2 rounded-full text-white ${
           highlighted
             ? 'bg-lime-500 hover:bg-lime-600'
             : 'bg-black hover:bg-gray-800'
         } transition-colors`}
+        type="button"
       >
         Choose Plan
       </button>
+      </Link>
     </div>
   );
 }
