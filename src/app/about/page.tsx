@@ -20,7 +20,7 @@ export default function AboutPage() {
                 <div>
                     <h2 className="text-3xl font-alegreya font-semibold mb-4">Our Journey</h2>
                     <p className="text-gray-600 mb-4">
-                       Lorem ipsum odor amet, consectetuer adipiscing elit. Purus litora aliquet quis ad amet netus suscipit lorem. Dictumst potenti nascetur ante euismod accumsan malesuada. Magnis maximus ipsum blandit fringilla ornare urna mattis leo.  
+                        NexGenesis was founded with the goal of revolutionizing the way businesses and individuals use technology. We are a team of developers, designers, and innovators dedicated to transforming ideas into digital realities. We want to create solutions that are both functional and user-friendly, and we believe that technology can be used to solve problems in a way that is meaningful to people. 
                     </p>
                     <p className="text-gray-600">
                         Today, we continue to push the boundaries of what possible in software development, always staying ahead of the curve in technology trends.

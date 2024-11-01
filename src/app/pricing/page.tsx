@@ -18,10 +18,10 @@ export default function PricingPage() {
           price="$99"
           description="Perfect for small businesses and startups"
           features={[
-            'Up to 5 users',
+            'Up to 5-20 users',
             'Basic support',
-            '1 project',
-            '5GB storage',
+            'Full project management', 
+            'Basic analytics',   
           ]}
         />
         <PricingCard
@@ -29,10 +29,9 @@ export default function PricingPage() {
           price="$199"
           description="Ideal for growing businesses"
           features={[
-            'Up to 20 users',
+            'Up to 20-50 users',
             'Priority support',
-            '5 projects',
-            '20GB storage',
+            'Advanced project management',
             'Advanced analytics',
           ]}
           highlighted={true}
@@ -45,7 +44,6 @@ export default function PricingPage() {
             'Unlimited users',
             '24/7 dedicated support',
             'Unlimited projects',
-            'Unlimited storage',
             'Custom integrations',
             'On-premise deployment option',
           ]}
