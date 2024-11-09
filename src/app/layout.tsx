@@ -5,6 +5,7 @@ import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import { alegreya, inter } from '@/lib/fonts';
 import { Toaster } from '@/components/ui/sonner';
+import ErrorBoundary from './error-boundary';
 
 
 export const metadata: Metadata = {
@@ -22,10 +23,12 @@ export default function RootLayout({
       <body
         className={`bg-white ${inter.className} ${alegreya.className} font-sans`}
       >
+        <ErrorBoundary>
         <Navbar />
         {children}
         <Footer />
         <Toaster position="top-right" />
+        </ErrorBoundary>
       </body>
  
     </html>
