@@ -6,6 +6,7 @@ import Footer from '@/components/footer';
 import { alegreya, inter } from '@/lib/fonts';
 import { Toaster } from '@/components/ui/sonner';
 import ErrorBoundary from './error-boundary';
+import { ThemeProvider } from '@/components/ui/theme-provider';
 
 
 export const metadata: Metadata = {
@@ -19,16 +20,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`bg-white ${inter.className} ${alegreya.className} font-sans`}
       >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
         <ErrorBoundary>
         <Navbar />
         {children}
         <Footer />
         <Toaster position="top-right" />
         </ErrorBoundary>
+        </ThemeProvider>
       </body>
  
     </html>
