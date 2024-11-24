@@ -29,7 +29,7 @@ const ShowcaseCard = ({
         className="h-[100px] w-[100px] lg:h-[200px] lg:w-[200px]"
       />
       <div className="flex flex-col gap-3">
-        <p className="text-4xl font-semibold font-alegreya">{title}</p>
+        <p className="text-4xl text-black font-semibold font-alegreya">{title}</p>
         <p className="text-gray-600 text-lg">{description}</p>
       </div>
     </motion.div>

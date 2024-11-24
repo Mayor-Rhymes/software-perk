@@ -8,7 +8,7 @@ const teamMembers = [
 
 export default function AboutPage() {
     return (
-        <div className="min-h-screen flex flex-col gap-16 px-4 sm:px-8 md:px-16 lg:px-20 py-16">
+        <div className="min-h-screen bg-background flex flex-col gap-16 px-4 sm:px-8 md:px-16 lg:px-20 py-16">
             <section className="text-center">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-alegreya mb-6">About NexGenesis</h1>
                 <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -37,7 +37,7 @@ export default function AboutPage() {
                 </div>
             </section>
 
-            <section className="bg-lime-100 p-8 rounded-lg">
+            <section className="bg-lime-100 p-8 rounded-lg text-black">
                 <h2 className="text-3xl font-alegreya font-semibold mb-4 text-center">Our Mission</h2>
                 <p className="text-xl text-center max-w-3xl mx-auto">
                     To empower businesses and individuals with innovative software solutions that drive growth, efficiency, and success in the digital age.

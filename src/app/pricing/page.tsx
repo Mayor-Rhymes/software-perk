@@ -2,7 +2,7 @@ import PricingCard from '@/components/pricing-card';
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen flex flex-col gap-10 px-4 sm:px-8 md:px-16 lg:px-20 py-16">
+    <div className="min-h-screen bg-background flex flex-col gap-10 px-4 sm:px-8 md:px-16 lg:px-20 py-16">
       <h1 className="text-center text-3xl sm:text-4xl lg:text-6xl font-alegreya">
         Our Pricing Plans
       </h1>

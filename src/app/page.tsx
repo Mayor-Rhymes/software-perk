@@ -8,7 +8,7 @@ import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+    <main className="min-h-screen bg-background flex flex-col gap-4 sm:gap-6 md:gap-8 lg:gap-10">
       <Hero />
       <Showcase />
       <Designs />

@@ -3,7 +3,7 @@ import * as motion from 'framer-motion/client';
 import engine from '../../public/images/computer-engineer.png';
 import engine2 from '../../public/images/computer-engineer-2.png';
 import Link from 'next/link';
-import { ModeToggle } from './mode-toggle';
+// import { ModeToggle } from './mode-toggle';
 
 export default function Hero() {
   return (

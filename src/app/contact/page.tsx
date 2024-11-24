@@ -9,13 +9,13 @@ import { toast } from 'sonner';
 export default function ContactPage() {
   
   return (
-    <div className="min-h-screen flex flex-col gap-16 px-4 sm:px-8 md:px-16 lg:px-20 py-16">
+    <div className="min-h-screen bg-background flex flex-col gap-16 px-4 sm:px-8 md:px-16 lg:px-20 py-16">
       <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-alegreya text-center mb-8">
         Get in Touch
       </h1>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <div className="bg-white shadow-lg rounded-lg p-8">
+      <div className="grid  grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="bg-background shadow-lg rounded-lg p-8">
           <h2 className="text-2xl font-alegreya font-semibold mb-6">
             Send us a Message
           </h2>
