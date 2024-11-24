@@ -18,7 +18,7 @@ export default function PricingCard({
 }: PricingCardProps) {
   return (
     <div
-      className={`bg-white shadow-md rounded-lg p-6 flex flex-col ${
+      className={`bg-background shadow-md rounded-lg p-6 flex flex-col ${
         highlighted ? 'border-2 border-lime-500 scale-105' : ''
       }`}
     >
