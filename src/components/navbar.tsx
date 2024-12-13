@@ -52,13 +52,13 @@ export default function Navbar() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem className="cursor-pointer" onClick={() => setTheme("light")}>
+              <DropdownMenuItem className="cursor-pointer rounded-lg text-sm font-medium p-2 hover:bg-gray-400 transition-colors" onClick={() => setTheme("light")}>
                 Light
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer" onClick={() => setTheme("dark")}>
+              <DropdownMenuItem className="cursor-pointer rounded-lg text-sm font-medium p-2 hover:bg-gray-400 transition-colors" onClick={() => setTheme("dark")}>
                 Dark
               </DropdownMenuItem>
-              <DropdownMenuItem className="cursor-pointer" onClick={() => setTheme("system")}>
+              <DropdownMenuItem className="cursor-pointer rounded-lg text-sm font-medium p-2 hover:bg-gray-400 transition-colors" onClick={() => setTheme("system")}>
                 System
               </DropdownMenuItem>
             </DropdownMenuContent>
