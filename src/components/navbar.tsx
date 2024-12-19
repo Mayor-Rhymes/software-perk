@@ -12,7 +12,7 @@ import { useTheme } from "next-themes";
 
 const menuItems = [
   { href: "/services", label: "Services" },
-  { href: "/pricing", label: "Pricing" },
+  //{ href: "/pricing", label: "Pricing" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
