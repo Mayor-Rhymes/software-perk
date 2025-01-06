@@ -92,11 +92,11 @@ export default function ContactPage() {
             </h2>
             <div className="space-y-4">
               <p className="flex items-center">
-                <MapPin className="mr-2" /> 123 Tech Street, Silicon Valley,
-                NG/PT
+                <MapPin className="mr-2" /> 61 Avenida Street, Lisboa,
+                Portugal
               </p>
               <p className="flex items-center">
-                <Phone className="mr-2" /> +1 (555) 123-4567
+                <Phone className="mr-2" /> +351 (910) 161-304
               </p>
               <p className="flex items-center">
                 <Mail className="mr-2" /> info@softwareperk.com
