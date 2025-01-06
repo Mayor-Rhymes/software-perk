@@ -27,13 +27,13 @@ export default function AboutPage() {
                     </p>
                 </div>
                 <div className="relative h-64 md:h-full">
-                    <Image
+                    {/* <Image
                         src="/images/journey.png"
                         alt="NexGenesis Journey"
                         layout="fill"
                         objectFit="cover"
                         className="rounded-lg"
-                    />
+                    /> */}
                 </div>
             </section>
 
@@ -49,13 +49,13 @@ export default function AboutPage() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
                     {teamMembers.map((member) => (
                         <div key={member.name} className="text-center">
-                            <Image
+                            {/* <Image
                                 src={member.image}
                                 alt={member.name}
                                 width={200}
                                 height={200}
                                 className="rounded-full mx-auto mb-4"
-                            />
+                            /> */}
                             <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
                             <p className="text-gray-600">{member.role}</p>
                         </div>
