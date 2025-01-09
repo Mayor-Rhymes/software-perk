@@ -35,10 +35,10 @@ export default function RootLayout({
             <Navbar />
             {children}
             <Footer />
+            <Analytics />
             <Toaster position="top-right" />
           </ErrorBoundary>
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   );
