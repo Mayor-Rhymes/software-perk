@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/sonner";
 import ErrorBoundary from "./error-boundary";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 
+
 export const metadata: Metadata = {
   title: "NexGenesis",
   description: "Software development company",
