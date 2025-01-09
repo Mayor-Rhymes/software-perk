@@ -52,13 +52,13 @@ export default function AboutPage() {
                     </div>
                     <div className="relative h-64 md:h-full">
                         {/* Image Placeholder */}
-                        {/* <Image
-                            src="/images/journey.png"
+                        <Image
+                            src="/images/NexGenesisSeo.jpeg"
                             alt="NexGenesis Journey"
                             layout="fill"
                             objectFit="cover"
                             className="rounded-lg"
-                        /> */}
+                        />
                     </div>
                 </section>
 
