@@ -7,6 +7,7 @@ import { Moon, MoonIcon, Sun } from "lucide-react";
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@radix-ui/react-dropdown-menu";
 import { Button } from "./ui/button";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 //import { motion } from "framer-motion";
 
@@ -26,9 +27,12 @@ export default function Navbar() {
 
   return (
     <nav className="hidden bg-background items-center justify-between h-20 px-6 sm:flex">
-      <Link href="/" className="text-2xl font-bold">
-        NexGenesis
-      </Link>
+       <div className="flex items-center space-x-2">
+        <Image src="/images/LogoNexGenesis.png" alt="NexGenesis" width={40} height={40} />
+        <Link href="/" className="text-2xl font-bold">
+          NexGenesis
+        </Link>
+      </div>
 
       <ul className="flex items-center space-x-8">
         {menuItems.map((item, index) => (
