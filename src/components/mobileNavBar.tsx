@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { Sheet, SheetContent, SheetTrigger } from './ui/sheet';
-import { Contact2, CreditCard, Menu, Moon, Server, Sun, UsersRound } from 'lucide-react';
+import { Contact2, Menu, Moon, Server, Sun, UsersRound } from 'lucide-react';
 import Link from 'next/link';
 import { DialogDescription, DialogTitle } from './ui/dialog';
 import * as VisuallyHidden from '@radix-ui/react-visually-hidden';
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu';
 import { useTheme } from 'next-themes';
+import Image from 'next/image';
 
 //import { motion } from 'framer-motion';
 
@@ -38,8 +39,9 @@ const MobileNavBar = () => {
           </DialogDescription>
           <div className="flex flex-col h-full">
             <div className="flex justify-between items-center mb-10">
-              <Link href="/" className="text-2xl font-bold">
-                NexGenesis
+              <Link href="/" className="flex items-center space-x-2 text-2xl font-bold">
+                <Image src="/images/LogoNexGenesis.png" alt="NexGenesis Logo" width={30} height={30} />
+                <span>NexGenesis</span>
               </Link>
             </div>
             <nav className="flex-grow">
