@@ -26,7 +26,6 @@ export default function AboutPage() {
                     property="og:description"
                     content="Meet the team behind NexGenesis. Discover our journey, mission, and commitment to revolutionizing the way businesses use technology."
                 />
-                <meta property="og:image" content="/images/og-image-about.png" />
                 <meta property="og:url" content="https://nexgenesis.dev/about" />
                 <meta property="og:type" content="website" />
 
