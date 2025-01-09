@@ -11,9 +11,32 @@ import { Analytics } from "@vercel/analytics/react"
 
 
 export const metadata: Metadata = {
-  title: "NexGenesis",
-  description: "Software consulting company",
+  title: "NexGenesis | Leading Software Consulting for Digital Transformation",
+  description: "NexGenesis is a top-tier software consulting company specializing in custom software development, digital transformation, and innovative tech solutions to empower businesses.",
+  keywords: "software consulting, custom software development, digital transformation, tech solutions, business growth, software innovation, NexGenesis",
+  authors: [{ name: "Gabriel Ogbera" }],
+  openGraph: {
+    title: "NexGenesis | Leading Software Consulting for Digital Transformation",
+    description: "NexGenesis provides innovative software solutions for businesses looking to digitally transform and thrive in the digital age.",
+    url: "https://nexgenesis.dev",
+    type: "website",
+    images: [
+      {
+        url: "/images/NexGenesisSeo", 
+        width: 1200,
+        height: 630,
+        alt: "NexGenesis - Software Consulting"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NexGenesis | Leading Software Consulting for Digital Transformation",
+    description: "NexGenesis is your trusted partner for custom software development, digital transformation, and business innovation.",
+    creator: "@nexgenesis"
+  }
 };
+
 
 export default function RootLayout({
   children,
