@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`bg-white ${inter.className} ${alegreya.className} font-sans`}
+        className={`${inter.variable} ${alegreya.variable} font-sans antialiased`}
       >
         <ThemeProvider
           attribute="class"
