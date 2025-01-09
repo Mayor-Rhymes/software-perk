@@ -7,11 +7,12 @@ import { alegreya, inter } from "@/lib/fonts";
 import { Toaster } from "@/components/ui/sonner";
 import ErrorBoundary from "./error-boundary";
 import { ThemeProvider } from "@/components/ui/theme-provider";
+import { Analytics } from "@vercel/analytics/react"
 
 
 export const metadata: Metadata = {
   title: "NexGenesis",
-  description: "Software development company",
+  description: "Software consulting company",
 };
 
 export default function RootLayout({
@@ -26,7 +27,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >
@@ -37,6 +38,7 @@ export default function RootLayout({
             <Toaster position="top-right" />
           </ErrorBoundary>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
