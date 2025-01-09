@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
-import { alegreya, inter } from "@/lib/fonts";
+import { alegreya } from "@/lib/fonts";
 import { Toaster } from "@/components/ui/sonner";
 import ErrorBoundary from "./error-boundary";
 import { ThemeProvider } from "@/components/ui/theme-provider";
@@ -22,9 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.variable} ${alegreya.variable} font-sans antialiased`}
-      >
+      <body className={`${alegreya.className}`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

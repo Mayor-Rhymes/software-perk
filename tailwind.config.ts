@@ -64,8 +64,8 @@ const config = {
   			}
   		},
   		fontFamily: {
-  			sans: ['var(--font-inter)'],
-  			alegreya: ['var(--font-alegreya)']
+  			sans: ['"Alegreya"', 'serif'],
+  			inter: ['var(--font-inter)']
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
