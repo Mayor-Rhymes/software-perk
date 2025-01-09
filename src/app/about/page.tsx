@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 const teamMembers = [
     { name: 'Gabriel Ogbera', role: 'CEO & Founder', image: '/images/gabriel.png' },
-    { name: 'Olakunle Oluwamayowa Raheem', role: 'CTO & Founder', image: '/images/olakunle.png' }
+    { name: 'Olakunle Oluwamayowa Raheem', role: 'CTO', image: '/images/olakunle.png' }
 ];
 
 export default function AboutPage() {
