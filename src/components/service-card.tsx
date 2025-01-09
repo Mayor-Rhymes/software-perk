@@ -11,4 +11,5 @@ export default function ServiceCard({
       <p className="text-white">{description}</p>
     </div>
   );
+  
 }

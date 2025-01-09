@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/NexGenesisSeo", 
+        url: "/images/NexGenesisSeo.jpeg", 
         width: 1200,
         height: 630,
         alt: "NexGenesis - Software Consulting"
