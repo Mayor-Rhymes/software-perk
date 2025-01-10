@@ -1,7 +1,4 @@
-import ServiceCard from "@/components/service-card";
-
-
-
+import ServiceCard from '@/components/service-card';
 
 export default function ServicesPage() {
   return (
@@ -9,7 +6,7 @@ export default function ServicesPage() {
       <h1 className="text-center text-3xl sm:text-4xl lg:text-6xl font-alegreya">
         Our Services
       </h1>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         <ServiceCard
           title="Web Development"
@@ -39,4 +36,3 @@ export default function ServicesPage() {
     </div>
   );
 }
-
